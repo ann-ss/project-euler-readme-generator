@@ -1,0 +1,25 @@
+{
+  "name": "project-euler-readme-generator",
+  "version": "1.0.0",
+  "description": "Generates short README.md files about Project Euler problems.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ann-ss/project-euler-readme-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ann-ss/project-euler-readme-generator/issues"
+  },
+  "homepage": "https://github.com/ann-ss/project-euler-readme-generator#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "path": "^0.12.7"
+  }
+}
