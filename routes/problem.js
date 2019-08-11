@@ -16,9 +16,11 @@ router.get("/:num", (req, res, next) => {
     .then(checkStatus)
     .then(response => {
       const $ = cheerio.load(response);
+      let description = $(".problem_content").text();
+      description = description.replace(/\n/g, "\n\n");
       let json = {
         "title": $("h2").text(),
-        "description": $(".problem_content").text(),
+        "description": description,
         "problem-number": req.params.num,
         "link": url
       }
