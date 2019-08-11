@@ -1,0 +1,5 @@
+---
+applications:
+ - name: project-euler-readme-generator
+   random-route: true
+   memory: 256M

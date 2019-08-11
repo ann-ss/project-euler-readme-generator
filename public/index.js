@@ -38,11 +38,13 @@
     fileContents += "\n" + "Link: " + responseData.link + "\n";
     fileContents += "\n" + "### Problem Description";
     fileContents += "\n" + responseData.description;
-    let link = document.createElement('a');
+    let link = document.createElement("a");
     link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileContents));
     link.setAttribute('download', fileName);
-    link.innerText = "Download generated README!"
-    document.body.appendChild(link);
+    link.innerText = "Download generated README for problem number " + responseData["problem-number"];
+    let container = document.createElement("div");
+    container.appendChild(link);
+    id("download-link-container").appendChild(container);
   }
 
   function download(filename, text) {
